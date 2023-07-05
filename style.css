@@ -1,4 +1,8 @@
-.modal-body{
+.modal-details{
     background-color: rgb(251, 238, 238);
-    border: 3px solid pink;
+    border: 1px solid pink;
+}
+.img-area{
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(97, 97, 97);
 }
