@@ -1,6 +1,14 @@
-const loadAi = () => {
+const loadAi = async() => {
     const url = `https://openapi.programming-hero.com/api/ai/tools`
     console.log(url);
+    // try{
+    //   const res = await fetch(url);
+    //   const data = await res.json();
+    //   displayAi(data.data)
+    // }
+    // catch(error){
+    //   console.log('Error:-', error)
+    // }
     fetch(url)
     .then(res => res.json())
     .then(data => displayAi(data.data.tools))
@@ -42,12 +50,20 @@ const displayAi = allAis => {
     });
 }
 
-const loadModalDetails = (aiId) => {
-    url = `https://openapi.programming-hero.com/api/ai/tool/${aiId}`;
+const loadModalDetails = async(aiId) => {
+    const url = `https://openapi.programming-hero.com/api/ai/tool/${aiId}`;
     console.log(url);
-    fetch(url)
-    .then(res => res.json())
-    .then(data => displayModalDetails(data.data))
+    try{
+      const res = await fetch(url);
+      const data = await res.json();
+      displayModalDetails(data.data)
+    }
+    catch(error){
+      console.log('Error:-', error)
+    }
+    // fetch(url)
+    // .then(res => res.json())
+    // .then(data => displayModalDetails(data.data))
 }
 
 const displayModalDetails = (idAi) => {
@@ -62,8 +78,8 @@ const displayModalDetails = (idAi) => {
         <h4>${idAi.description}</h4>
         <div class="packes mt-4 d-lg-flex d-md-flex gap-2 justify-content-center">
           <div class="one bg-white p-3 rounded-3 mb-3 text-success ">
-            <h5 class="plan fs-5 text-center fw-bold">${idAi.pricing[0].plan}</h5>
-            <h5 class="price fs-5 text-center fw-bold">${idAi.pricing[0].price}</h5>
+            <h5 class="plan fs-5 text-center fw-bold">${idAi.pricing[0].plan ? idAi.pricing[0].plan : 'No Price'}</h5>
+            <h5 class="price fs-5 text-center fw-bold">${idAi.pricing[0].price ? idAi.pricing[0].price : 'No Price'}</h5>
           </div>
           <div class="two bg-white p-3 rounded-3 mb-3 text-warning">
             <h5 class="plan fs-5 text-center fw-bold">${idAi.pricing[1].plan}</h5>
