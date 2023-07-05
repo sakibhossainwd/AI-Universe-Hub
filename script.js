@@ -28,7 +28,7 @@ const displayAi = allAis => {
                       <ol>
                         <li>${ai.features[0]}</li>
                         <li>${ai.features[1]}</li>
-                        <li>${ai.features[2]}</li>
+                        <li>${ai.features[2] ? ai.features[2] : 'No found'}</li>
                       </ol>
                       <hr>
                       <div class="details d-flex justify-content-between align-items-center bg-light p-2">
