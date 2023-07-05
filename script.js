@@ -74,7 +74,7 @@ const displayModalDetails = (idAi) => {
     
         modalBody.innerHTML = `
         <div id="modal-container" class="modal-body gap-5 d-lg-flex m-3">
-        <div class="modal-details py-3 px-4 rounded-3 mt-4 w-50">
+        <div class="modal-details py-3 px-4 rounded-3 mt-4">
         <h4>${idAi.description}</h4>
         <div class="packes mt-4 d-lg-flex d-md-flex gap-2 justify-content-center">
           <div class="one bg-white p-3 rounded-3 mb-3 text-success ">
