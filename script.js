@@ -43,48 +43,52 @@ const displayAi = allAis => {
 }
 
 const loadModalDetails = (aiId) => {
-    url = `https://openapi.programming-hero.com/api/ai/tool/${aiId}}`;
+    url = `https://openapi.programming-hero.com/api/ai/tool/${aiId}`;
     console.log(url);
     fetch(url)
     .then(res => res.json())
-    .then(data => displayModalDetails(data))
+    .then(data => displayModalDetails(data.data))
 }
 
 const displayModalDetails = (idAi) => {
-    console.log(idAi);
+    console.log(idAi.features['1'].feature_name);
     const detailsContainer = document.getElementById('modal-container');
     detailsContainer.innerHTML = '';
     const modalBody = document.createElement('div');
-    // modalBody.classList.add('modal-body gap-5 d-lg-flex m-3');
+    
         modalBody.innerHTML = `
+        <div id="modal-container" class="modal-body gap-5 d-lg-flex m-3">
         <div class="modal-details py-3 px-4 rounded-3 mt-4">
-        <h4>ChatGPT is an AI-powered chatbot platform that uses OpenAI's GPT technology to simulate human conversation.</h4>
+        <h4>${idAi.description}</h4>
         <div class="packes mt-4 d-lg-flex d-md-flex gap-2 justify-content-center">
-          <div class="one bg-white p-3 rounded-3 mb-3">
-            <h5 class="fs-5 text-center text-success fw-bold">$10/month Basic</h5>
+          <div class="one bg-white p-3 rounded-3 mb-3 text-success ">
+            <h5 class="plan fs-5 text-center fw-bold">${idAi.pricing[0].plan}</h5>
+            <h5 class="price fs-5 text-center fw-bold">${idAi.pricing[0].price}</h5>
           </div>
-          <div class="two bg-white p-3  rounded-3 mb-3">
-            <h5 class="fs-5 text-center text-danger fw-bold">$10/month Basic</h5>
+          <div class="two bg-white p-3 rounded-3 mb-3 text-warning">
+            <h5 class="plan fs-5 text-center fw-bold">${idAi.pricing[1].plan}</h5>
+            <h5 class="price fs-5 text-center fw-bold">${idAi.pricing[1].price}</h5>
           </div>
-          <div class="three bg-white p-3  rounded-3 mb-3">
-            <h5 class="fs-5 text-center text-warning fw-bold">$10/month Basic</h5>
+          <div class="three bg-white p-3 rounded-3 mb-3 text-danger">
+            <h5 class="plan fs-5 text-center fw-bold">${idAi.pricing[2].plan}</h5>
+            <h5 class="price fs-5 text-center fw-bold">${idAi.pricing[2].price}</h5>
           </div>
         </div>
         <div class="inpormation d-flex justify-content-between mt-3">
           <div class="features">
             <h3>Featuras</h3>
             <ul>
-              <li>Customizalble responsess</li>
-              <li>Customizalble responsess</li>
-              <li>Customizalble responsess</li>
+              <li>${idAi.features['1'].feature_name}</li>
+              <li>${idAi.features['2'].feature_name}</li>
+              <li>${idAi.features['3'].feature_name ? idAi.features['3'].feature_name : 'no found'}</li>
             </ul>
           </div>
           <div class="integrations">
             <h3>Featuras</h3>
             <ul>
-              <li>Customizalble responsess</li>
-              <li>Customizalble responsess</li>
-              <li>Customizalble responsess</li>
+              <li>${idAi.integrations['1']}</li>
+              <li>${idAi.integrations['2']}</li>
+              <li>${idAi.integrations['3']}</li>
             </ul>
           </div>
         </div>
@@ -92,7 +96,7 @@ const displayModalDetails = (idAi) => {
        <div class="img-area px-4 py-3 rounded-3 mt-4">
         <div class="img-box position-relative">
           <div class="img position-relative">
-            <img class="img-fluid rounded-3" src="./pic2.jpg" alt="">
+            <img class="img-fluid rounded-3" src="${idAi.image_link[0]}" alt="">
           </div>
           <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
             <div class="badge-tex">
@@ -106,7 +110,9 @@ const displayModalDetails = (idAi) => {
           <p class="fs-5">I'm doing well, thank you for asking. How can I assist you today?</p>
         </div>
        </div>
+       </div>
     `
+
     detailsContainer.appendChild(modalBody);
 }
 
