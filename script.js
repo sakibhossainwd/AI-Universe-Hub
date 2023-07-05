@@ -51,7 +51,7 @@ const loadModalDetails = (aiId) => {
 }
 
 const displayModalDetails = (idAi) => {
-    console.log(idAi.features['1'].feature_name);
+    console.log(idAi);
     const detailsContainer = document.getElementById('modal-container');
     detailsContainer.innerHTML = '';
     const modalBody = document.createElement('div');
@@ -84,11 +84,11 @@ const displayModalDetails = (idAi) => {
             </ul>
           </div>
           <div class="integrations">
-            <h3>Featuras</h3>
+            <h3>Integrations</h3>
             <ul>
-              <li>${idAi.integrations['1']}</li>
-              <li>${idAi.integrations['2']}</li>
-              <li>${idAi.integrations['3']}</li>
+              <li>${idAi.integrations['1'] ? idAi.integrations['1'] : 'No found'}</li>
+              <li>${idAi.integrations['2'] ? idAi.integrations['2'] : 'No found'}</li>
+              <li>${idAi.integrations['3'] ? idAi.integrations['3'] : 'No found'}</li>
             </ul>
           </div>
         </div>
