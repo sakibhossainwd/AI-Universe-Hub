@@ -26,7 +26,7 @@ const displayAi = allAis => {
                       <div class="details d-flex justify-content-between align-items-center bg-light p-2">
                         <div class="name">
                             <h5 class="card-title">${ai.name}</h5>
-                            <p>Date: ${ai.published_in}</p>
+                            <p><i class="fa-solid fa-calendar-days"></i> ${ai.published_in}</p>
                         </div>
                         <div class="modal-icon text-primary">
                             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
