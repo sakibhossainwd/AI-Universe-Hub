@@ -33,7 +33,7 @@ const displayAi = allAis => {
                       <hr>
                       <div class="details d-flex justify-content-between align-items-center bg-light p-2">
                         <div class="name">
-                            <h5 class="card-title">${ai.name}</h5>
+                            <h5 class="card-title fw-bolder fs-4">${ai.name}</h5>
                             <p><i class="fa-solid fa-calendar-days"></i> ${ai.published_in}</p>
                         </div>
                         <div class="modal-icon text-primary">
