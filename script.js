@@ -12,9 +12,9 @@ const displayAi = allAis => {
         // console.log(ai.id);
         const div = document.createElement('div');
         div.innerHTML = `
-        <div class="col">
+        <div class="col car-height">
                   <div class="card">
-                    <img src="${ai.image}" class="card-img-top" alt="...">
+                    <img src="${ai.image}" class="card-img-top img-fluid" alt="...">
                     <div class="card-body">
                       <h5 class="card-title">Features</h5>
                       <ol>
