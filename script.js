@@ -9,7 +9,7 @@ const loadAi = () => {
 const displayAi = allAis => {
     const allAiContainer = document.getElementById('all-ai-container');
     allAis.forEach(ai => {
-        console.log(ai.id);
+        // console.log(ai.id);
         const div = document.createElement('div');
         div.innerHTML = `
         <div class="col">
@@ -29,7 +29,7 @@ const displayAi = allAis => {
                             <p><i class="fa-solid fa-calendar-days"></i> ${ai.published_in}</p>
                         </div>
                         <div class="modal-icon text-primary">
-                            <button onclick="loadModalDetails('${ai.id}') type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <button onclick="loadModalDetails('${ai.id}')" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                               <i class="fa-solid fa-arrow-right-to-bracket"></i>
                             </button>
                         </div>
@@ -47,16 +47,17 @@ const loadModalDetails = (aiId) => {
     console.log(url);
     fetch(url)
     .then(res => res.json())
-    .then(data => displayModalDetails(data.data))
+    .then(data => displayModalDetails(data))
 }
 
 const displayModalDetails = (idAi) => {
     console.log(idAi);
-    const detailsContainer = document.getElementById('details-container');
-    detailsContainer.innerHTML = ''
+    const detailsContainer = document.getElementById('modal-container');
+    detailsContainer.innerHTML = '';
     const modalBody = document.createElement('div');
+    // modalBody.classList.add('modal-body gap-5 d-lg-flex m-3');
         modalBody.innerHTML = `
-        <div class="modal-details py-3 px-4 rounded-3 mt-4 ">
+        <div class="modal-details py-3 px-4 rounded-3 mt-4">
         <h4>ChatGPT is an AI-powered chatbot platform that uses OpenAI's GPT technology to simulate human conversation.</h4>
         <div class="packes mt-4 d-lg-flex d-md-flex gap-2 justify-content-center">
           <div class="one bg-white p-3 rounded-3 mb-3">
