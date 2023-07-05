@@ -35,7 +35,7 @@
                             <p>Date: 11/01/2022</p>
                         </div>
                         <div class="modal-icon text-primary">
-                            <button class="btn btn-primary">
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                               <i class="fa-solid fa-arrow-right-to-bracket"></i>
                             </button>
                         </div>
@@ -50,9 +50,9 @@
         <!-- modal -->
         <section>
             <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
     Launch demo modal
-  </button>
+  </button> -->
   
   <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -95,8 +95,16 @@
             </div>
           </div>
          </div>
-         <div class="img">
-          <img class="img-fluid" src="./pic2.jpg" alt="">
+         <div class="img-area">
+          <div class="img-box position-relative">
+            <div class="img position-relative">
+              <img class="img-fluid" src="./pic2.jpg" alt="">
+            </div>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+              94% accuracy
+              <span class="visually-hidden">unread messages</span>
+            </span>
+          </div>
           <div class="img-details text-center mt-3">
             <h2>Hi, how are you doing today?</h2>
             <p class="fs-5">I'm doing well, thank you for asking. How can I assist you today?</p>
