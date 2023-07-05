@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- css added -->
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="w-75  m-auto">
+    <header class="py-5 ">
+        <h1 class="text-center fw-bolder display-4">AI Universe Hub</h1>
+        <div class="text-center mt-5">
+            <button class="btn btn-primary text-white fs-5 fw-semibold ">Sort By Date</button>
+        </div>
+    </header>
+    <main>
+        <section>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                  <div class="card">
+                    <img src="pic.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <ol>
+                        <li>Natural language processing</li>
+                        <li>Natural language processing</li>
+                        <li>Natural language processing</li>
+                      </ol>
+                      <hr>
+                      <div class="details d-flex justify-content-between align-items-center bg-light p-2">
+                        <div class="name">
+                            <h5 class="card-title">Card title</h5>
+                            <p>Date: 11/01/2022</p>
+                        </div>
+                        <div class="modal-icon text-primary">
+                            <button class="btn btn-primary">
+                              <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                            </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+        
+              </div>
+        </section>
+
+        <!-- modal -->
+        <section>
+            <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Launch demo modal
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body gap-5 d-lg-flex p-3 rounded-3 m-3">
+         <div class="details">
+          <h4>ChatGPT is an AI-powered chatbot platform that uses OpenAI's GPT technology to simulate human conversation.</h4>
+          <div class="packes mt-3 d-lg-flex d-md-flex gap-2 justify-content-between justify-content-center">
+            <div class="one bg-white p-3 rounded-3">
+              <h5 class="fs-5 text-center text-success fw-bold">$10/month Basic</h5>
+            </div>
+            <div class="two bg-white p-3  rounded-3">
+              <h5 class="fs-5 text-center text-danger fw-bold">$10/month Basic</h5>
+            </div>
+            <div class="three bg-white p-3  rounded-3">
+              <h5 class="fs-5 text-center text-warning fw-bold">$10/month Basic</h5>
+            </div>
+          </div>
+          <div class="inpormation d-flex justify-content-between mt-3">
+            <div class="features">
+              <h3>Featuras</h3>
+              <ul>
+                <li>Customizalble responsess</li>
+                <li>Customizalble responsess</li>
+                <li>Customizalble responsess</li>
+              </ul>
+            </div>
+            <div class="integrations">
+              <h3>Featuras</h3>
+              <ul>
+                <li>Customizalble responsess</li>
+                <li>Customizalble responsess</li>
+                <li>Customizalble responsess</li>
+              </ul>
+            </div>
+          </div>
+         </div>
+         <div class="img">
+          <img class="img-fluid" src="./pic2.jpg" alt="">
+          <div class="img-details text-center mt-3">
+            <h2>Hi, how are you doing today?</h2>
+            <p class="fs-5">I'm doing well, thank you for asking. How can I assist you today?</p>
+          </div>
+         </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+        </section>
+    </main>
+    
+
+
+
+
+    <!-- Script file here -->
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <!-- fontAwesome kit link -->
+    <script src="https://kit.fontawesome.com/1987a1475d.js" crossorigin="anonymous"></script>
+  </body>
+</html>
