@@ -27,7 +27,7 @@ const displayAi = allAis => {
                       <h5 class="card-title">Features</h5>
                       <ol>
                         <li>${ai.features[0]}</li>
-                        <li>${ai.features[1]}</li>
+                        <li>${ai.features[1] ? ai.features[1]  : 'No found'}</li>
                         <li>${ai.features[2] ? ai.features[2] : 'No found'}</li>
                       </ol>
                       <hr>
