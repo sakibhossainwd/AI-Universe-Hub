@@ -24,7 +24,7 @@ const displayAi = allAis => {
                   <div class="card">
                     <img src="${ai.image}" class="card-img-top img-fluid" alt="...">
                     <div class="card-body">
-                      <h5 class="card-title">Features</h5>
+                      <h5 class="card-title fw-bold">Features</h5>
                       <ol>
                         <li>${ai.features[0] ? ai.features[0] : 'No found'}</li>
                         <li>${ai.features[1] ? ai.features[1]  : 'No found'}</li>
