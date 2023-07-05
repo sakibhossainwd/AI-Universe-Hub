@@ -79,7 +79,7 @@ const displayModalDetails = (idAi) => {
         <div class="packes mt-4 d-lg-flex d-md-flex gap-2 justify-content-center">
           <div class="one bg-white p-3 rounded-3 mb-3 text-success ">
             <h5 class="plan fs-5 text-center fw-bold">${idAi.pricing[0].plan ? idAi.pricing[0].plan : 'No Plan'}</h5>
-            <h5 class="price fs-5 text-center fw-bold">${idAi.pricing[0].price ? idAi.pricing[0].price : 'No Price'}</h5>
+            <h5 class="price fs-5 text-center fw-bold">${idAi.pricing[0].price}</h5>
           </div>
           <div class="two bg-white p-3 rounded-3 mb-3 text-warning">
             <h5 class="plan fs-5 text-center fw-bold">${idAi.pricing[1].plan}</h5>
