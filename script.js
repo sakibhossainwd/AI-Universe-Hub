@@ -94,7 +94,7 @@ const displayModalDetails = (idAi) => {
           <div class="features">
             <h3>Featuras</h3>
             <ul>
-              <li>${idAi.features['1'].feature_name}</li>
+              <li>${idAi.features['1'].feature_name ? idAi.features['2'].feature_name : 'No found'}</li>
               <li>${idAi.features['2'].feature_name ? idAi.features['2'].feature_name : 'No found'}</li>
               <li>${idAi.features['3'].feature_name ? idAi.features['3'].feature_name : 'no found'}</li>
             </ul>
