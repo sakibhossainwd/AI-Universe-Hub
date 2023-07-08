@@ -16,6 +16,7 @@ const loadAi = async() => {
 
 const displayAi = allAis => {
     const allAiContainer = document.getElementById('all-ai-container');
+    allAis = allAis.slice(0,3);
     allAis.forEach(ai => {
         // console.log(ai.id);
         const div = document.createElement('div');
