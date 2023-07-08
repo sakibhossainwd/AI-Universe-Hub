@@ -9,9 +9,11 @@ const loadAi = async() => {
     // catch(error){
     //   console.log('Error:-', error)
     // }
+    toggleSpinner('loading');
     fetch(url)
     .then(res => res.json())
     .then(data => displayAi(data.data.tools))
+    toggleSpinner('loaded-data')
 }
 
 const displayAi = allAis => {
@@ -49,6 +51,17 @@ const displayAi = allAis => {
         `
        allAiContainer.appendChild(div);
     });
+}
+
+// loader part
+const toggleSpinner = isLoading => {
+  const loaderSection = document.getElementById('loader');
+  if(isLoading === 'loading'){
+    loaderSection.classList.remove('d-none')
+  }
+  else if(isLoading === 'loaded-data'){
+    loaderSection.classList.add('d-none')
+  }
 }
 
 const loadModalDetails = async(aiId) => {
