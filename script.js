@@ -18,11 +18,12 @@ const loadAi = async() => {
 
 const displayAi = allAis => {
     const allAiContainer = document.getElementById('all-ai-container');
-    allAis = allAis.slice(0,6);
-    // Show mor part
+    
+  // Show mor part
   const showMore = document.getElementById('show-more');
-  if(allAis > 6){
-    showMore.classList.remove("d-none");
+  if(allAis.length > 6){
+    allAis = allAis.slice(0,3);
+    showMore.classList.remove('d-none');
   }
   else{
     showMore.classList.add('d-none')
