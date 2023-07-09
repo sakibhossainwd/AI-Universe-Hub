@@ -64,6 +64,10 @@ const toggleSpinner = isLoading => {
   }
 }
 
+// Show mor part
+const showMore = document.getElementById('show-more');
+
+
 const loadModalDetails = async(aiId) => {
     const url = `https://openapi.programming-hero.com/api/ai/tool/${aiId}`;
     console.log(url);
