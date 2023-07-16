@@ -1,19 +1,19 @@
 const loadAi = async() => {
     const url = `https://openapi.programming-hero.com/api/ai/tools`
     console.log(url);
-    // try{
-    //   const res = await fetch(url);
-    //   const data = await res.json();
-    //   displayAi(data.data)
-    // }
-    // catch(error){
-    //   console.log('Error:-', error)
-    // }
-    toggleSpinner('loading');
-    fetch(url)
-    .then(res => res.json())
-    .then(data => displayAi(data.data.tools))
-    toggleSpinner('loaded-data')
+    try{
+      const res = await fetch(url);
+      const data = await res.json();
+      displayAi(data.data.tools)
+    }
+    catch(error){
+      console.log('Error:-', error)
+    }
+    // toggleSpinner('loading');
+    // fetch(url)
+    // .then(res => res.json())
+    // .then(data => displayAi(data.data.tools))
+    // toggleSpinner('loaded-data')
 }
 
 const displayAi = allAis => {
